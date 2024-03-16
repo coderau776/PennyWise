@@ -17,7 +17,7 @@ public class LoggingAspect {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* * com.atharva.pwise.*.*(..))")
+    @Pointcut("execution(* com.atharva.pwise.*.*(..))")
     private void methodsFromAllPackages() {
     }
     @Before(value = "methodsFromAllPackages()")
